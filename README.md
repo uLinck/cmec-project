@@ -1,2 +1,2 @@
-# cmec-project
-a website for the private school CMEC
+A website for the private school CMEC.
+Developer's: uLinck and uFleck
