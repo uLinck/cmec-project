@@ -1,12 +1,11 @@
-import React from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      Projetinho
-    </div>
-  );
+    return (
+        <div className="App font-bold">
+            Projetinho
+        </div>
+    );
 }
 
 export default App;
