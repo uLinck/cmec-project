@@ -1,10 +1,10 @@
 import './App.css';
-import Home from './Pages/Home';
+import { Acorn } from '@phosphor-icons/react'
 
 function App() {
     return (
         <div className="App">
-            <Home></Home>
+            <Acorn size={32} />
         </div>
     );
 }
