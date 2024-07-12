@@ -6,7 +6,6 @@ import theme from './styles/material-ui';
 
 
 function App() {
-  console.log({ theme })
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
