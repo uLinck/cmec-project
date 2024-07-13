@@ -1,13 +1,17 @@
-import React from 'react';
 import './App.css';
+import { ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import theme from './styles/material-ui';
+
 
 
 function App() {
   return (
-    <div className="App">
-      <Button variant="contained">BUTAO</Button>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Button variant="contained" color='secondary' >BUTAO</Button>
+      </div>
+    </ThemeProvider>
   );
 }
 
