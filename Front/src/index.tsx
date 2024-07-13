@@ -6,6 +6,8 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Router from './router';
+import { ThemeProvider } from '@mui/material';
+import theme from './styles/material-ui';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +15,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Router />
+    <ThemeProvider theme={theme}>
+        <Router />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
