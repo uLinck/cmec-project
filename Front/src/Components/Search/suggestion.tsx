@@ -13,10 +13,13 @@ export const Suggestion = ({ icon, description, search }: TSuggestion) => {
         <Box sx={{
             display: "flex",
             justifyContent: "start",
+            alignItems: "center",
             color: colors.neutral0,
             gap: "0.5rem",
-            padding: "0.8rem 0.5rem",
+            paddingY: "0.5rem",
+            paddingX: "1rem",
             borderRadius: "0.5rem",
+            fontSize: "1.05em",
             transition: "background-color 0.2s ease",
             ":hover": {
                 backgroundColor: colors.neutral60,
