@@ -1,11 +1,9 @@
-import { Button } from '@mui/material';
+import Search from '../../Components/Search';
 
 const Home = () => {
     return (
-        <div>
-            <Button variant='contained' color='secondary'>
-                BUTAOZAO
-            </Button>
+        <div className='flex justify-center my-5'>
+            <Search />
         </div>
     )
 }
