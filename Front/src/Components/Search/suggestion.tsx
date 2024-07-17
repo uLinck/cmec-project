@@ -1,14 +1,15 @@
 import { Box } from "@mui/material";
 import { getHighlightedText } from "../../Helpers/textHelper";
+import { File } from "phosphor-react";
 import colors from "../../Styles/colors";
 
 type TSuggestion = {
-    icon: JSX.Element
+    icon?: JSX.Element
     description: string
     search: string
 }
 
-export const Suggestion = ({ icon, description, search }: TSuggestion) => {
+export const Suggestion = ({ icon = <File size={20} />, description, search }: TSuggestion) => {
     return (
         <Box sx={{
             display: "flex",

@@ -1,5 +1,5 @@
 import { Box, Button, Modal, TextField } from "@mui/material";
-import { MagnifyingGlass, X, File } from "phosphor-react";
+import { MagnifyingGlass, X } from "phosphor-react";
 import React from "react";
 import colors from "../../Styles/colors";
 import { Suggestion } from "./suggestion";
@@ -9,10 +9,10 @@ export default function Search() {
 
     const [suggestionsFilter, setSuggestionsFilter] = React.useState("")
 
-    let suggestions = [
-        <Suggestion icon={<File size={20} />} description="Quanto é a mensalidade?" search={suggestionsFilter} />,
-        <Suggestion icon={<File size={20} />} description="Onde fica?" search={suggestionsFilter} />
-    ]
+    const suggestions = [
+        "Onde fica?",
+        "Quanto é a mensalidade?"
+    ].filter(description => description.toLowerCase().includes(suggestionsFilter.toLowerCase()))
 
     return (
         <div
@@ -101,7 +101,7 @@ export default function Search() {
                         >
                             Sugestões
                         </Box>
-                        {suggestions.filter(s => s.props.description.toLowerCase().includes(suggestionsFilter.toLowerCase()))}
+                        {suggestions.map(description => <Suggestion description={description} search={suggestionsFilter} />)}
                     </Box>
                 </Box>
             </Modal>
