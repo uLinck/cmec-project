@@ -31,12 +31,12 @@ export const Header = () => {
                         gap: "2rem",
                     }}
                 >
-                    <a href="#">Início</a>
-                    <a href="#">Quem somos</a>
-                    <a href="#">Infraestrutura</a>
-                    <a href="#">Ativ. Pedagógicas</a>
-                    <a href="#">Serviços</a>
-                    <a href="#">Ver escola</a>
+                    <a href="#" className="nav-item">Início</a>
+                    <a href="#" className="nav-item">Quem somos</a>
+                    <a href="#" className="nav-item">Infraestrutura</a>
+                    <a href="#" className="nav-item">Ativ. Pedagógicas</a>
+                    <a href="#" className="nav-item">Serviços</a>
+                    <a href="#" className="nav-item">Ver escola</a>
                 </Box>
             </Box>
             <Box

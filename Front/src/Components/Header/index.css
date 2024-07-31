@@ -1,9 +1,9 @@
-a {
+.nav-item {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s;
 }
 
-a:hover {
+.nav-item:hover {
     color: #F9FBFF
 }
