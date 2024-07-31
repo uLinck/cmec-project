@@ -51,6 +51,7 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash": "4.17.6"
+    "@types/lodash": "4.17.6",
+    "yarn-deduplicate": "^6.0.2"
   }
 }

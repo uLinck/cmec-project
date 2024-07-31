@@ -80,14 +80,20 @@ export default function Search() {
                             }}
                             onChange={e => setSuggestionsFilter(e.target.value)}
                         />
-                        <Box onClick={() => setOpen(false)}
+                        <Button onClick={() => setOpen(false)}
                             sx={{
-                                cursor: "pointer",
+                                all: "unset",
                                 height: "18px",
                                 marginLeft: "0.5rem",
+                                '&:hover': {
+                                    all: "unset",
+                                    height: "18px",
+                                    marginLeft: "0.5rem",
+                                    cursor: "pointer",
+                                }
                             }}>
                             <X size={18} color={colors.neutral40} />
-                        </Box>
+                        </Button>
                     </Box>
                     <Box
                         sx={{
