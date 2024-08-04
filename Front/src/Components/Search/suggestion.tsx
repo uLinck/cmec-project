@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { getHighlightedText } from "../../Helpers/textHelper";
-import { File } from "phosphor-react";
+import { File } from "@phosphor-icons/react";
 import colors from "../../Styles/colors";
 
 type TSuggestion = {
