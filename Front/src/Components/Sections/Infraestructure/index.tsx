@@ -26,7 +26,7 @@ export const Infraestructure = () => {
         {
             icon: <MetlifeIcon sx={{ fontSize: "60px" }} />,
             title: "Seguro Metlife",
-            description: "Ao se matricularem, todos os nossos alunos recebem automaticamente a cobertura do Seguro Metlife."
+            description: "Cobertura do Seguro Metlife à todos os alunos matriculados."
         },
         {
             icon: <RecreationalSquareIcon sx={{ fontSize: "60px", fill: colors.accent100 }} />,
@@ -42,11 +42,14 @@ export const Infraestructure = () => {
                 maxWidth: "100vw",
                 display: "flex",
                 justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+                paddingY: "60vh",
             }}
         >
+            <h1 style={{ color: colors.accent100, marginBottom: "4rem", fontWeight: "normal" }}>Infraestrutura</h1>
             <Box
                 sx={{
-                    paddingY: "60vh",
                     width: "1200px",
                     display: "flex",
                     justifyContent: "center",
@@ -63,6 +66,6 @@ export const Infraestructure = () => {
                     {items.map(item => <Item {...item} />)}
                 </Fade>
             </Box>
-        </Box>
+        </Box >
     )
 }
