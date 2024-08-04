@@ -1,5 +1,5 @@
 import { Box, Button, Modal, TextField } from "@mui/material";
-import { MagnifyingGlass, X } from "phosphor-react";
+import { MagnifyingGlass, X } from "@phosphor-icons/react";
 import React from "react";
 import colors from "../../Styles/colors";
 import { Suggestion } from "./suggestion";

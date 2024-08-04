@@ -1,10 +1,18 @@
-import { Header } from '../../Components/Header';
+import { Box } from "@mui/material";
+import { Infraestructure } from "../../Components/Sections/Infraestructure";
 
 const Home = () => {
     return (
-        <div className='flex justify-center my-5'>
-            <Header />
-        </div>
+        <Box
+            sx={{
+                maxWidth: "100vw"
+            }}
+        >
+            <Box sx={{ height: "100vh" }} />
+            <Box sx={{ height: "100vh" }} />
+            <Infraestructure />
+            <Box sx={{ height: "100vh" }} />
+        </Box>
     )
 }
 
