@@ -49,7 +49,6 @@ export const Infraestructure = () => {
                     paddingY: "60vh",
                     width: "1200px",
                     display: "flex",
-                    flexDirection: "row",
                     justifyContent: "center",
                     alignItems: "flex-start",
                     flexWrap: "wrap",
