@@ -1,9 +1,9 @@
-import Search from '../../Components/Search';
+import { Header } from '../../Components/Header';
 
 const Home = () => {
     return (
         <div className='flex justify-center my-5'>
-            <Search />
+            <Header />
         </div>
     )
 }
