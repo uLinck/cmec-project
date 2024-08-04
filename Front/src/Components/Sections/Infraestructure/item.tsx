@@ -1,13 +1,13 @@
 import { Box } from "@mui/material"
 import colors from "../../../Styles/colors"
 
-type ItemData = {
+type TItemData = {
     icon: JSX.Element
     title: string
     description: string
 }
 
-export const Item = ({ icon, title, description }: ItemData) => {
+export const Item = ({ icon, title, description }: TItemData) => {
     return (
         <Box
             sx={{
