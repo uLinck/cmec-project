@@ -60,7 +60,7 @@ export const Infraestructure = () => {
                     cascade
                     damping={0.2}
                 >
-                    {items.map(item => <Item icon={item.icon} title={item.title} description={item.description} />)}
+                    {items.map(item => <Item {...item} />)}
                 </Fade>
             </Box>
         </Box>
