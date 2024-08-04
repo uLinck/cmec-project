@@ -2,6 +2,7 @@ import { Button } from "@mui/material"
 import { Box } from "@mui/system"
 import colors from "../../Styles/colors"
 import Search from "../Search"
+import logo from "../../Assets/Imgs/LogoWhiteM.svg"
 import './index.css'
 
 export const Header = () => {
@@ -24,7 +25,7 @@ export const Header = () => {
                     gap: "3rem",
                 }}
             >
-                <img src="/LogoWhiteM.svg" alt="Logo" />
+                <img src={logo} alt="Logo" />
                 <Box
                     sx={{
                         display: "flex",
