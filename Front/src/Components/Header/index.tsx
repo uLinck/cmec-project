@@ -4,17 +4,45 @@ import colors from "../../Styles/colors"
 import Search from "../Search"
 import logo from "../../Assets/Imgs/LogoWhiteM.svg"
 import './index.css'
+import { useEffect, useState } from "react"
 
-export const Header = () => {
+type THeaderData = {
+    bodyQuerySelector: string
+}
+
+export const Header = (data: THeaderData) => {
+    const [backgroundColor, setBackgroundColor] = useState(colors.neutral80);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                //setBackgroundColor(entry.isIntersecting ? "transparent" : colors.neutral80)
+            },
+            { threshold: 0.2 }
+        )
+
+        const target = document.querySelector(data.bodyQuerySelector);
+        if (target) observer.observe(target)
+
+        return () => {
+            if (target) observer.unobserve(target)
+        }
+    }, [])
+
     return (
         <Box
             sx={{
-                backgroundColor: colors.neutral80,
+                top: 0,
+                position: "sticky",
+                zIndex: 1000,
+                backgroundColor: backgroundColor,
                 paddingY: "0.8rem",
                 paddingX: "3rem",
                 color: colors.neutral40,
                 display: "flex",
                 alignItems: "center",
+                borderBottom: "1px solid",
+                transition: "all 0.3s ease",
             }}
         >
             <Box

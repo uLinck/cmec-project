@@ -8,7 +8,7 @@ import ExamplePage from './Pages/Example';
 function App() {
   return (
     <BrowserRouter>
-      <Routes>   
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/example" element={<ExamplePage />} />
       </Routes>
