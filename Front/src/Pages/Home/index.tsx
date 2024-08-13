@@ -11,7 +11,7 @@ const Home = () => {
                 maxWidth: "100vw",
             }}
         >
-            <Header bodyQuerySelector="#body" />
+            <Header />
             <Box sx={{ height: "100vh" }} />
             <Box
                 id="body"
