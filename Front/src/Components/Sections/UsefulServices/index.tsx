@@ -8,7 +8,6 @@ export const UsefulServices = () => {
     return (
         <Box
             sx={{
-                backgroundColor: colors.neutral100,
                 maxWidth: "100vw",
                 display: "flex",
                 justifyContent: "center",
@@ -58,6 +57,7 @@ export const UsefulServices = () => {
                     direction="up"
                     cascade
                     damping={0.2}
+                    triggerOnce
                 >
                     <Service icon={<Hoodie size={60} color={colors.accent100} />} name="Uniformes" personName="RS 020 - Morungava" contacts={["(51) 3486-1192"]} />
                     <Service icon={<Van size={60} color={colors.accent100} />} name="Van Escolar" personName="Severo Tur" contacts={["(51) 3432-0212", "(51) 3106-3217", "(51) 9 9125-7619"]} />
