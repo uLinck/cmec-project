@@ -38,16 +38,23 @@ export const Infraestructure = () => {
     return (
         <Box
             sx={{
-                backgroundColor: colors.neutral100,
                 maxWidth: "100vw",
+                minHeight: "100vh",
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
-                paddingY: "60vh",
             }}
         >
-            <h1 style={{ color: colors.accent100, marginBottom: "4rem", fontWeight: "normal" }}>Infraestrutura</h1>
+            <h1
+                style={{
+                    color: colors.accent100,
+                    marginBottom: "4rem",
+                    fontWeight: "normal"
+                }}
+            >
+                Infraestrutura
+            </h1>
             <Box
                 sx={{
                     width: "1200px",
@@ -62,6 +69,7 @@ export const Infraestructure = () => {
                     direction="up"
                     cascade
                     damping={0.2}
+                    triggerOnce
                 >
                     {items.map(item => <Item {...item} />)}
                 </Fade>

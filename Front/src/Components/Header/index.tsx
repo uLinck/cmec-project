@@ -9,12 +9,17 @@ export const Header = () => {
     return (
         <Box
             sx={{
+                top: 0,
+                position: "sticky",
+                zIndex: 1000,
                 backgroundColor: colors.neutral80,
                 paddingY: "0.8rem",
                 paddingX: "3rem",
                 color: colors.neutral40,
                 display: "flex",
                 alignItems: "center",
+                borderBottom: "1px solid",
+                transition: "all 0.3s ease",
             }}
         >
             <Box
