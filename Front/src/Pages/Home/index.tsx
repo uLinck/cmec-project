@@ -3,6 +3,7 @@ import { Infraestructure } from "../../Components/Sections/Infraestructure";
 import { PedagogicalActivities } from "../../Components/Sections/PedagogicalActivities";
 import colors from "../../Styles/colors";
 import { Header } from "../../Components/Header";
+import { UsefulServices } from "../../Components/Sections/UsefulServices";
 
 const Home = () => {
     return (
@@ -22,7 +23,7 @@ const Home = () => {
                 <Infraestructure />
                 <Box sx={{ height: "30vh" }} />
                 <PedagogicalActivities />
-                <Box sx={{ height: "100vh" }} />
+                <UsefulServices />
             </Box>
         </Box>
     )
