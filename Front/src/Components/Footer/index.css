@@ -1,0 +1,25 @@
+.facebookLogo {
+    color: #93A0B0;
+    transition: all 0.3s;
+}
+.whatsappLogo {
+    color: #93A0B0;
+    transition: all 0.3s;
+}
+.instagramLogo {
+    color: #93A0B0;
+    transition: all 0.3s;
+}
+
+.facebookLogo:hover {
+    color: #4992FF;
+    cursor: pointer;
+}
+.whatsappLogo:hover {
+    color: #00FF66;
+    cursor: pointer;
+}
+.instagramLogo:hover {
+    color: #FD24A6;
+    cursor: pointer;
+}
