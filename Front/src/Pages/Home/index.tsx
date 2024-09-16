@@ -4,6 +4,7 @@ import { PedagogicalActivities } from "../../Components/Sections/PedagogicalActi
 import colors from "../../Styles/colors";
 import { Header } from "../../Components/Header";
 import { UsefulServices } from "../../Components/Sections/UsefulServices";
+import { Footer } from "../../Components/Footer";
 
 const Home = () => {
     return (
@@ -23,6 +24,7 @@ const Home = () => {
                 <Box sx={{ height: "30vh" }} />
                 <PedagogicalActivities />
                 <UsefulServices />
+                <Footer />
             </Box>
         </Box>
     )
