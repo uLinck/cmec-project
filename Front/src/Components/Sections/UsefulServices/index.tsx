@@ -59,7 +59,6 @@ export const UsefulServices = () => {
                     damping={0.2}
                     triggerOnce
                 >
-                    <Service icon={<Hoodie size={60} color={colors.accent100} />} name="Uniformes" personName="RS 020 - Morungava" contacts={["(51) 3486-1192"]} />
                     <Service icon={<Van size={60} color={colors.accent100} />} name="Van Escolar" personName="Severo Tur" contacts={["(51) 3432-0212", "(51) 3106-3217", "(51) 9 9125-7619"]} />
                     <Service icon={<Van size={60} color={colors.accent100} />} name="Van Escolar" personName="Laércio" contacts={["(51) 9 9652-4683", "(51) 9 8431-7455"]} />
                 </Fade>
