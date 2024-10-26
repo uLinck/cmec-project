@@ -1,13 +1,31 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import colors from "../../../Styles/colors";
 import { ReactComponent as BackpackIcon } from "../../../Assets/Imgs/Bolsinha.svg";
+import { ReactComponent as InstituicaoIcon } from "../../../Assets/Imgs/InstituicaoIcon.svg";
+import { ReactComponent as CooperativaIcon } from "../../../Assets/Imgs/CooperativaIcon.svg";
+import { ReactComponent as VerEscolaIcon } from "../../../Assets/Imgs/VerEscolaIcon.svg";
+import { Fade } from "react-awesome-reveal";
+
+const styledButton = {
+  textTransform: "none",
+  display: "flex",
+  justifyContent: "start",
+  width: "100%",
+  fontSize: 23,
+  background: colors.neutral80,
+  color: colors.accent80,
+  borderRadius: "10px",
+  marginBottom: "10px",
+  "&:hover": {
+    backgroundColor: colors.neutral60,
+  },
+};
 
 export const AboutUs = () => {
   return (
     <Box
       sx={{
         maxWidth: "100vw",
-        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         gap: "7rem",
@@ -50,7 +68,7 @@ export const AboutUs = () => {
             fontSize: "24px",
             fontWeight: "normal",
             width: "40vw",
-            textIndent: "40px"
+            textIndent: "40px",
           }}
         >
           O Colégio Santa Luzia busca integrar-se à comunidade no processo de
@@ -58,6 +76,38 @@ export const AboutUs = () => {
           respeito à diversidade e à individualidade, e proporcionando um ensino
           diferenciado e de excelência.
         </p>
+      </Box>
+      <Box
+        sx={{
+          position: "absolute",
+          width: "200px",
+          top: "10%",
+          left: "80%",
+        }}
+      >
+        <Fade direction="right" cascade damping={0.2} triggerOnce>
+          <Button
+            variant="contained"
+            startIcon={<InstituicaoIcon display={"flex"} />}
+            sx={styledButton}
+          >
+            Instituição
+          </Button>
+          <Button
+            variant="contained"
+            startIcon={<CooperativaIcon display={"flex"} />}
+            sx={styledButton}
+          >
+            Cooperativa
+          </Button>
+          <Button
+            variant="contained"
+            startIcon={<VerEscolaIcon display={"flex"} />}
+            sx={styledButton}
+          >
+            Ver escola
+          </Button>
+        </Fade>
       </Box>
     </Box>
   );
