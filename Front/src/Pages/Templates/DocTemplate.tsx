@@ -23,7 +23,7 @@ const Doc = (data: TDocData) => {
                     content: '""',
                     position: "absolute",
                     top: 0,
-                    left: "10px", // Ajusta a posição para fora do elemento
+                    left: "10px",
                     width: "10px",
                     height: "100%",
                     borderTopLeftRadius: '20px', // Aplica o border-radius no pseudo-elemento
