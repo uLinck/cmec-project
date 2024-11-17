@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 
 const Instituicao = () => {
   return (
-    <Box sx={{ height: "100vh", width: "90vw", maxWidth: "100vw" }}>
+    <Box sx={{ height: "100vh", width: "80vw", maxWidth: "100vw" }}>
       <Doc
         category="Testes"
         title="Teste 1"

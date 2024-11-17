@@ -10,6 +10,7 @@ export const PageLayout = () => {
       style={{
         display: "flex",
         backgroundColor: colors.neutral60,
+        height: '100vh'
       }}
     >
       <Sidebar />
