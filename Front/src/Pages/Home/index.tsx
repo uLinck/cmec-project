@@ -5,29 +5,32 @@ import colors from "../../Styles/colors";
 import { Header } from "../../Components/Header";
 import { UsefulServices } from "../../Components/Sections/UsefulServices";
 import { Footer } from "../../Components/Footer";
+import { AboutUs } from "../../Components/Sections/AboutUs";
 
 const Home = () => {
-    return (
-        <Box
-            sx={{
-                maxWidth: "100vw"
-            }}
-        >
-            <Box sx={{ height: "100vh" }} />
-            <Box
-                id="body"
-                sx={{
-                    background: `linear-gradient(20deg, ${colors.neutral80} 0%, ${colors.neutral60} 50%, ${colors.primary60} 100%)`
-                }}
-            >
-                <Infraestructure />
-                <Box sx={{ height: "30vh" }} />
-                <PedagogicalActivities />
-                <UsefulServices />
-                <Footer />
-            </Box>
-        </Box>
-    )
-}
+  return (
+    <Box
+      sx={{
+        maxWidth: "100vw",
+      }}
+    >
+      <Header />
+      <Box sx={{ height: "100vh" }} />
+      <Box
+        id="body"
+        sx={{
+          background: `linear-gradient(20deg, ${colors.neutral80} 0%, ${colors.neutral60} 50%, ${colors.primary60} 100%)`,
+        }}
+      >
+        <AboutUs />
+        <Infraestructure />
+        <Box sx={{ height: "30vh" }} />
+        <PedagogicalActivities />
+        <UsefulServices />
+        <Footer />
+      </Box>
+    </Box>
+  );
+};
 
 export default Home;
