@@ -104,6 +104,13 @@ export const AboutUs = () => {
             variant="contained"
             startIcon={<VerEscolaIcon display={"flex"} />}
             sx={styledButton}
+            onClick={() =>
+              window.open(
+                "https://bit.ly/ver-escola",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           >
             Ver escola
           </Button>

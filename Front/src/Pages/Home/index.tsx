@@ -15,18 +15,26 @@ const Home = () => {
       }}
     >
       <Header />
-      <Box sx={{ height: "100vh" }} />
       <Box
         id="body"
         sx={{
           background: `linear-gradient(20deg, ${colors.neutral80} 0%, ${colors.neutral60} 50%, ${colors.primary60} 100%)`,
         }}
       >
-        <AboutUs />
-        <Infraestructure />
+        <Box id="quem-somos">
+          <Box sx={{ height: "60vh", backgroundColor: "red !important" }} />
+          <AboutUs />
+        </Box>
+        <Box id="infraestrutura">
+          <Infraestructure />
+        </Box>
         <Box sx={{ height: "30vh" }} />
-        <PedagogicalActivities />
-        <UsefulServices />
+        <Box id="atividades">
+          <PedagogicalActivities />
+        </Box>
+        <Box id="servicos">
+          <UsefulServices />
+        </Box>
         <Footer />
       </Box>
     </Box>
