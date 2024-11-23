@@ -5,11 +5,14 @@ const Instituicao = () => {
   return (
     <Box sx={{ height: "100vh", width: "80vw", maxWidth: "100vw" }}>
       <Doc
-        category="Testes"
-        title="Teste 1"
-        description="Teste realizado por macacos"
+        category="Colaboradores"
+        title="Instituição"
+        description="Saiba quem são os colaboradores da instituição!"
       >
-        <Box>Cuzinho!!!!</Box>
+        <Box sx={{ justifyContent: "column" }}>
+          <h3>Administração</h3>
+          <p>César Valmor Aguiar</p>
+        </Box>
       </Doc>
     </Box>
   );
