@@ -20,7 +20,8 @@ export const Sidebar = () => {
     <div
       style={{
         width: "25%",
-        background: `linear-gradient(20deg, ${colors.neutral80} 0%, ${colors.neutral60} 50%, ${colors.neutral60} 100%)`
+        background: `linear-gradient(20deg, ${colors.neutral80} 0%, ${colors.neutral60} 50%, ${colors.neutral60} 100%)`,
+        position: "relative"
       }}
     >
       <div
@@ -95,7 +96,8 @@ export const Sidebar = () => {
         <div
           style={{
             position: "absolute",
-            bottom: 30
+            bottom: 0,
+            marginBottom: "30px"
           }}
         >
           <Link

@@ -3,8 +3,15 @@ import "./App.css"
 
 import Home from "./Pages/Home"
 import { PageLayout } from "./Components/PageLayout"
-import Instituicao from "./Pages/modulos/Instituicao"
-import Cooperativa from "./Pages/modulos/Cooperativa"
+import Instituicao from "./Pages/Modulos/Colaboradores/Instituicao"
+import Cooperativa from "./Pages/Modulos/Colaboradores/Cooperativa"
+import { PrimeiroAno } from "./Pages/Modulos/Calendario/Fundamental/PrimeiroAno"
+import { SegundoAno } from "./Pages/Modulos/Calendario/Fundamental/SegundoAno"
+import { TerceiroAno } from "./Pages/Modulos/Calendario/Fundamental/TerceiroAno"
+import { QuartoAno } from "./Pages/Modulos/Calendario/Fundamental/QuartoAno"
+import { QuintoAno } from "./Pages/Modulos/Calendario/Fundamental/QuintoAno"
+import { SextoAno } from "./Pages/Modulos/Calendario/Fundamental/SextoAno"
+import { Infantil } from "./Pages/Modulos/Calendario/Infantil"
 
 function App() {
   return (
@@ -15,45 +22,43 @@ function App() {
           <Route path="colaboradores/instituicao" element={<Instituicao />} />
           <Route path="colaboradores/cooperativa" element={<Cooperativa />} />
 
-          <Route
-            path="calendario/infantil/pre-quinto"
-            element={<Cooperativa />}
-          />
+          <Route path="calendario/infantil/pre-quinto" element={<Infantil />} />
           <Route
             path="calendario/fundamental/primeiro-ano"
-            element={<Cooperativa />}
+            element={<PrimeiroAno />}
           />
           <Route
             path="calendario/fundamental/segundo-ano"
-            element={<Cooperativa />}
+            element={<SegundoAno />}
           />
           <Route
             path="calendario/fundamental/terceiro-ano"
-            element={<Cooperativa />}
+            element={<TerceiroAno />}
           />
           <Route
             path="calendario/fundamental/quarto-ano"
-            element={<Cooperativa />}
+            element={<QuartoAno />}
           />
           <Route
             path="calendario/fundamental/quinto-ano"
-            element={<Cooperativa />}
+            element={<QuintoAno />}
           />
           <Route
             path="calendario/fundamental/sexto-ano"
-            element={<Cooperativa />}
+            element={<SextoAno />}
           />
+
           <Route
             path="calendario/medio/primeiro-ano-medio"
-            element={<Cooperativa />}
+            element={<PrimeiroAno />}
           />
           <Route
             path="calendario/medio/segundo-ano-medio"
-            element={<Cooperativa />}
+            element={<PrimeiroAno />}
           />
           <Route
             path="calendario/medio/terceiro-ano-medio"
-            element={<Cooperativa />}
+            element={<PrimeiroAno />}
           />
         </Route>
       </Routes>
