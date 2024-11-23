@@ -1,10 +1,11 @@
-import { Box, Button } from "@mui/material";
-import colors from "../../../Styles/colors";
-import { ReactComponent as BackpackIcon } from "../../../Assets/Imgs/Bolsinha.svg";
-import { ReactComponent as InstituicaoIcon } from "../../../Assets/Imgs/InstituicaoIcon.svg";
-import { ReactComponent as CooperativaIcon } from "../../../Assets/Imgs/CooperativaIcon.svg";
-import { ReactComponent as VerEscolaIcon } from "../../../Assets/Imgs/VerEscolaIcon.svg";
-import { Fade } from "react-awesome-reveal";
+import { Box, Button } from "@mui/material"
+import colors from "../../../Styles/colors"
+import { ReactComponent as BackpackIcon } from "../../../Assets/Imgs/Bolsinha.svg"
+import { ReactComponent as InstituicaoIcon } from "../../../Assets/Imgs/InstituicaoIcon.svg"
+import { ReactComponent as CooperativaIcon } from "../../../Assets/Imgs/CooperativaIcon.svg"
+import { ReactComponent as VerEscolaIcon } from "../../../Assets/Imgs/VerEscolaIcon.svg"
+import { Fade } from "react-awesome-reveal"
+import { useNavigate } from "react-router-dom"
 
 const styledButton = {
   textTransform: "none",
@@ -17,11 +18,12 @@ const styledButton = {
   borderRadius: "10px",
   marginBottom: "10px",
   "&:hover": {
-    backgroundColor: colors.neutral60,
-  },
-};
+    backgroundColor: colors.neutral60
+  }
+}
 
 export const AboutUs = () => {
+  const navigateTo = useNavigate()
   return (
     <Box
       sx={{
@@ -31,7 +33,7 @@ export const AboutUs = () => {
         gap: "7rem",
         paddingX: "4rem",
         overflow: "hidden",
-        position: "relative",
+        position: "relative"
       }}
     >
       <Box
@@ -40,14 +42,14 @@ export const AboutUs = () => {
           flexDirection: "column",
           alignItems: "center",
           alignSelf: "center",
-          width: "60%",
+          width: "60%"
         }}
       >
         <Box
           sx={{
             position: "absolute",
             top: "7%",
-            left: "10%",
+            left: "10%"
           }}
         >
           <BackpackIcon width="140px" height="140px" />
@@ -56,7 +58,7 @@ export const AboutUs = () => {
           style={{
             color: colors.accent100,
             marginBottom: "0rem",
-            fontWeight: "normal",
+            fontWeight: "normal"
           }}
         >
           Quem Somos?
@@ -68,7 +70,7 @@ export const AboutUs = () => {
             fontSize: "24px",
             fontWeight: "normal",
             width: "40vw",
-            textIndent: "40px",
+            textIndent: "40px"
           }}
         >
           O Colégio Santa Luzia busca integrar-se à comunidade no processo de
@@ -82,7 +84,7 @@ export const AboutUs = () => {
           position: "absolute",
           width: "200px",
           top: "10%",
-          left: "80%",
+          left: "80%"
         }}
       >
         <Fade direction="right" cascade damping={0.2} triggerOnce>
@@ -90,6 +92,7 @@ export const AboutUs = () => {
             variant="contained"
             startIcon={<InstituicaoIcon display={"flex"} />}
             sx={styledButton}
+            onClick={() => navigateTo("modulo/colaboradores/instituicao")}
           >
             Instituição
           </Button>
@@ -97,6 +100,7 @@ export const AboutUs = () => {
             variant="contained"
             startIcon={<CooperativaIcon display={"flex"} />}
             sx={styledButton}
+            onClick={() => navigateTo("modulo/colaboradores/cooperativa")}
           >
             Cooperativa
           </Button>
@@ -117,5 +121,5 @@ export const AboutUs = () => {
         </Fade>
       </Box>
     </Box>
-  );
-};
+  )
+}
