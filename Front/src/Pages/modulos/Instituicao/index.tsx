@@ -1,5 +1,5 @@
-import Doc from "../../Templates/DocTemplate";
-import { Box } from "@mui/material";
+import Doc from "../../Templates/DocTemplate"
+import { Box } from "@mui/material"
 
 const Instituicao = () => {
   return (
@@ -15,7 +15,7 @@ const Instituicao = () => {
         </Box>
       </Doc>
     </Box>
-  );
-};
+  )
+}
 
-export default Instituicao;
+export default Instituicao
