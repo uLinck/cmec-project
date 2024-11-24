@@ -1,27 +1,28 @@
-import colors from "../../Styles/colors"
-import logo from "../../Assets/Imgs/LogoWhiteM.svg"
-import { Link, useLocation } from "react-router-dom"
-import { routesCalendario, routesColab } from "./routes"
-import { Item } from "./Item"
-import { Title } from "./Title"
-import { removerAcentos } from "../../Helpers/textHelper"
-import { ReactComponent as ArrowIcon } from "../../Assets/Imgs/Arrow.svg"
+import colors from "../../Styles/colors";
+import logo from "../../Assets/Imgs/LogoWhiteM.svg";
+import { Link, useLocation } from "react-router-dom";
+import { routesCalendario, routesColab } from "./routes";
+import { Item } from "./Item";
+import { Title } from "./Title";
+import { removerAcentos } from "../../Helpers/textHelper";
+import { ReactComponent as ArrowIcon } from "../../Assets/Imgs/Arrow.svg";
 
 // TODO: Separar logicas de menus em lugares diferentes (na pressa fiz assim cagado kk)
 
 export const Sidebar = () => {
-  const location = useLocation()
+  const location = useLocation();
 
   const [, , moduloNome, moduloValor, moduloCalendarioValor] =
-    location.pathname.split("/")
+    location.pathname.split("/");
 
-  console.log({ moduloCalendarioValor })
+  console.log({ moduloCalendarioValor });
   return (
     <div
       style={{
         width: "25%",
         background: `linear-gradient(20deg, ${colors.neutral80} 0%, ${colors.neutral60} 50%, ${colors.neutral60} 100%)`,
-        position: "relative"
+        position: "relative",
+        minHeight: "100vh",
       }}
     >
       <div
@@ -29,7 +30,7 @@ export const Sidebar = () => {
           display: "flex",
           flexDirection: "column",
           marginLeft: "20px",
-          marginTop: "10px"
+          marginTop: "10px",
         }}
       >
         <img src={logo} alt="Logo" width={80} />
@@ -40,31 +41,31 @@ export const Sidebar = () => {
             margin: 0,
             padding: 0,
             display: "flex",
-            flexDirection: "column"
+            flexDirection: "column",
           }}
         >
           {moduloNome === "colaboradores"
-            ? routesColab.map(item => (
+            ? routesColab.map((item) => (
                 <Item
                   item={{
                     name: item.name,
-                    value: `${moduloNome}/${item.value}`
+                    value: `${moduloNome}/${item.value}`,
                   }}
                   active={item.value === moduloValor}
                 />
               ))
-            : routesCalendario.map(item => {
+            : routesCalendario.map((item) => {
                 return (
                   <>
                     <Title title={item.categoria} />
-                    {item.subMenus.map(subMenu => (
+                    {item.subMenus.map((subMenu) => (
                       <>
                         <Item
                           item={{
                             name: subMenu.name,
                             value: `${moduloNome}/${removerAcentos(
                               item.categoria
-                            )}/${subMenu.value}`
+                            )}/${subMenu.value}`,
                           }}
                           active={subMenu.value === moduloCalendarioValor}
                         />
@@ -83,50 +84,52 @@ export const Sidebar = () => {
                           width: "100px",
                           marginTop: "6px",
                           marginLeft: "24px",
-                          transition: "all 0.3s"
+                          transition: "all 0.3s",
                         }}
                       />
                     ) : (
                       <div></div>
                     )}
                   </>
-                )
+                );
               })}
         </ul>
-        <div
+      </div>
+
+      <div
+        style={{
+          position: "fixed",
+          bottom: "30px",
+          left: "20px",
+          zIndex: 10,
+        }}
+      >
+        <Link
+          to="/"
           style={{
-            position: "absolute",
-            bottom: 0,
-            marginBottom: "30px"
+            textDecoration: "none",
           }}
         >
-          <Link
-            to="/"
+          <div
             style={{
-              textDecoration: "none"
+              display: "flex",
+              alignItems: "center",
             }}
           >
-            <div
+            <ArrowIcon height={13} width={13} />
+            <span
               style={{
-                display: "flex",
-                alignItems: "center"
+                color: colors.neutral10,
+                marginLeft: "15px",
+                marginBottom: "2px",
               }}
             >
-              <ArrowIcon height={13} width={13} />
-              <span
-                style={{
-                  color: colors.neutral10,
-                  marginLeft: "15px",
-                  marginBottom: "2px"
-                }}
-              >
-                {" "}
-                Voltar ao início{" "}
-              </span>
-            </div>
-          </Link>
-        </div>
+              {" "}
+              Voltar ao início{" "}
+            </span>
+          </div>
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};

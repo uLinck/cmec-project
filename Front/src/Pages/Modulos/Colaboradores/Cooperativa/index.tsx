@@ -1,8 +1,44 @@
-import colors from "../../../../Styles/colors"
-import Doc from "../../../Templates/DocTemplate"
-import { Box } from "@mui/material"
+import colors from "../../../../Styles/colors";
+import Doc from "../../../Templates/DocTemplate";
+import { Box } from "@mui/material";
 
 const Cooperativa = () => {
+  const cooperativados: string[] = [
+    "Maria Emília Narciso Barcelos",
+    "Éverton Belloli Moura",
+    "João de Deus Fontoura Borges",
+    "Joyce Vidal Sarmento",
+    "Dani Cleura Pezente Schuller",
+    "Adriana dos Santos Lemos",
+    "Maria Fabiana da Silva",
+    "Juraci Terezinha Pospichil",
+    "Urubatan de Moura Souza",
+    "Carine Aparecida Rech Ferreira",
+    "Liliane Kersting Pereira",
+    "Márcia Aparecida Stumpf Aguiar",
+    "Roberto de Oliveira Silveira",
+    "Mariana Felker de Moraes Lemos",
+    "Leticia Pacheco Viegas Araújo",
+    "Renata Cornely Rocha",
+    "Natália Cristina Moberger",
+    "Vitor Rhoden Sperb",
+    "Rosângela de Souza Narcizo",
+    "Renata da Silva Braun Falkowski",
+    "Júlia Machado Petry",
+    "Tatiana Brambila Rockenbach",
+  ];
+
+  const groupCooperativados = (list: string[], size: number): string[][] => {
+    if (!Array.isArray(list)) return [];
+    const grouped: string[][] = [];
+    for (let i = 0; i < list.length; i += size) {
+      grouped.push(list.slice(i, i + size));
+    }
+    return grouped;
+  };
+
+  const groupedCooperativados = groupCooperativados(cooperativados, 3);
+
   return (
     <Box sx={{ width: "80vw", maxWidth: "100vw" }}>
       <Doc
@@ -12,7 +48,7 @@ const Cooperativa = () => {
           <Box
             sx={{
               display: "flex",
-              flexDirection: "column"
+              flexDirection: "column",
             }}
           >
             <span>
@@ -20,7 +56,7 @@ const Cooperativa = () => {
               mantenedora do Colégio Santa Luzia.
             </span>
             <span>
-              A Cooperativa foi fundada em 2007 e atualmente tem 21 associados.
+              A Cooperativa foi fundada em 2007 e atualmente tem 22 associados.
             </span>
           </Box>
         }
@@ -29,57 +65,57 @@ const Cooperativa = () => {
           <h3>Conselho Administrativo</h3>
           <Box
             sx={{
-              display: "flex"
+              display: "flex",
             }}
           >
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "column"
+                flexDirection: "column",
               }}
             >
               <Box
                 sx={{
                   display: "flex",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <p
                   style={{
-                    margin: "5px 0"
+                    margin: "5px 0",
                   }}
                 >
-                  César Valmor Aguiar
+                  Juraci Terezinha Pospichil
                 </p>
                 <span
                   style={{
                     color: colors.accent80,
-                    marginLeft: "5px"
+                    marginLeft: "5px",
                   }}
                 >
-                  Diretor
+                  Presidente
                 </span>
               </Box>
               <Box
                 sx={{
                   display: "flex",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <p
                   style={{
-                    margin: "5px 0"
+                    margin: "5px 0",
                   }}
                 >
-                  Hilda Luzia da Silva Nascimento
+                  Carine Aparecida Rech Ferreira
                 </p>
                 <span
                   style={{
                     color: colors.accent80,
-                    marginLeft: "5px"
+                    marginLeft: "5px",
                   }}
                 >
-                  Vice Diretora
+                  Vice-presidente
                 </span>
               </Box>
             </Box>
@@ -88,138 +124,90 @@ const Cooperativa = () => {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                marginLeft: "30px"
+                marginLeft: "30px",
               }}
             >
               <Box
                 sx={{
                   display: "flex",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <p
                   style={{
-                    margin: "5px 0"
+                    margin: "5px 0",
                   }}
                 >
-                  Luiz carlos
+                  Mariana Felker de Moraes Lemos
                 </p>
                 <span
                   style={{
                     color: colors.accent80,
-                    marginLeft: "5px"
+                    marginLeft: "5px",
                   }}
                 >
-                  Monitor
+                  Secretária
                 </span>
               </Box>
               <Box
                 sx={{
                   display: "flex",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <p
                   style={{
-                    margin: "5px 0"
+                    margin: "5px 0",
                   }}
                 >
-                  João de Deus Fontoura Borges
+                  Joyce Vidal Sarmento
                 </p>
                 <span
                   style={{
                     color: colors.accent80,
-                    marginLeft: "5px"
+                    marginLeft: "5px",
                   }}
                 >
-                  Funcionário
+                  Tesoureira
                 </span>
               </Box>
             </Box>
           </Box>
+
           <h3>Cooperativados</h3>
           <Box
             sx={{
-              display: "flex"
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
             }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column"
-              }}
-            >
+            {groupedCooperativados.map((group, index) => (
               <Box
+                key={index}
                 sx={{
                   display: "flex",
-                  alignItems: "center"
+                  gap: "20px",
                 }}
               >
-                <p
-                  style={{
-                    margin: "5px 0"
-                  }}
-                >
-                  César Valmor Aguiar
-                </p>
+                {group.map((name, idx) => (
+                  <p
+                    key={idx}
+                    style={{
+                      margin: "5px 0",
+                      color: colors.primary60,
+                    }}
+                  >
+                    {name}
+                  </p>
+                ))}
               </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center"
-                }}
-              >
-                <p
-                  style={{
-                    margin: "5px 0"
-                  }}
-                >
-                  Hilda Luzia da Silva Nascimento
-                </p>
-              </Box>
-            </Box>
-
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                marginLeft: "30px"
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center"
-                }}
-              >
-                <p
-                  style={{
-                    margin: "5px 0"
-                  }}
-                >
-                  Luiz carlos
-                </p>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center"
-                }}
-              >
-                <p
-                  style={{
-                    margin: "5px 0"
-                  }}
-                >
-                  João de Deus Fontoura Borges
-                </p>
-              </Box>
-            </Box>
+            ))}
           </Box>
         </Box>
       </Doc>
     </Box>
-  )
-}
+  );
+};
 
-export default Cooperativa
+export default Cooperativa;

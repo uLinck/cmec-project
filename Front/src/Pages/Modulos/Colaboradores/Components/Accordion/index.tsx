@@ -1,29 +1,29 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Box
-} from "@mui/material"
-import colors from "../../../../../Styles/colors"
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+  Box,
+} from "@mui/material";
+import colors from "../../../../../Styles/colors";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 type TAccordionColab = {
-  id: string
-  expanded: boolean
-  handleChange: (event: React.SyntheticEvent, expanded: boolean) => void
-  title: string
+  id: string;
+  expanded: boolean;
+  handleChange: (event: React.SyntheticEvent, expanded: boolean) => void;
+  title: string;
   data: {
-    name: string
-    tags: string[]
-  }[]
-}
+    name: string;
+    tags: string[];
+  }[];
+};
 export const AccordionColab = ({
   expanded,
   handleChange,
   id,
   title,
-  data
+  data,
 }: TAccordionColab) => {
   return (
     <Accordion
@@ -31,7 +31,7 @@ export const AccordionColab = ({
         width: "350px",
         borderRadius: "10px !important",
         background: `linear-gradient(0deg, ${colors.neutral60}, ${colors.neutral60}),
-linear-gradient(264.05deg, rgba(147, 160, 176, 0.2) 0%, rgba(50, 64, 82, 0.2) 50%)`
+linear-gradient(264.05deg, rgba(147, 160, 176, 0.2) 0%, rgba(50, 64, 82, 0.2) 50%)`,
       }}
       expanded={expanded}
       onChange={handleChange}
@@ -48,22 +48,23 @@ linear-gradient(264.05deg, rgba(147, 160, 176, 0.2) 0%, rgba(50, 64, 82, 0.2) 50
           sx={{
             display: "flex",
             width: "100%",
-            gap: "20px"
+            gap: "20px",
           }}
         >
-          {data.map(item => {
+          {data.map((item) => {
             return (
               <Box
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  width: "160px"
+                  width: "160px",
                 }}
               >
                 <h4
                   style={{
                     textAlign: "center",
-                    marginTop: "0px"
+                    marginTop: "0px",
+                    marginBottom: "10px",
                   }}
                 >
                   {item.name}
@@ -73,17 +74,17 @@ linear-gradient(264.05deg, rgba(147, 160, 176, 0.2) 0%, rgba(50, 64, 82, 0.2) 50
                     display: "flex",
                     gap: "5px",
                     flexWrap: "wrap",
-                    justifyContent: "center"
+                    justifyContent: "center",
                   }}
                 >
-                  {item.tags.map(tag => (
+                  {item.tags.map((tag) => (
                     <span
                       style={{
                         color: colors.accent100,
                         border: `1px solid ${colors.accent100}`,
                         borderRadius: "100px",
                         fontSize: "12px",
-                        padding: "5px"
+                        padding: "5px",
                       }}
                     >
                       {tag}
@@ -91,10 +92,10 @@ linear-gradient(264.05deg, rgba(147, 160, 176, 0.2) 0%, rgba(50, 64, 82, 0.2) 50
                   ))}
                 </Box>
               </Box>
-            )
+            );
           })}
         </Box>
       </AccordionDetails>
     </Accordion>
-  )
-}
+  );
+};
