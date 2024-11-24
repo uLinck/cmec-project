@@ -37,14 +37,16 @@ const Home = () => {
         <Box id="infraestrutura">
           <Infraestructure />
         </Box>
-        <Box sx={{ height: "30vh" }} />
+        <Box sx={{ height: "15vh" }} />
         <Box id="atividades">
           <PedagogicalActivities />
         </Box>
         <Box id="servicos">
           <UsefulServices />
         </Box>
-        <Footer />
+        <Box id="footer">
+          <Footer />
+        </Box>
       </Box>
     </Box>
   );

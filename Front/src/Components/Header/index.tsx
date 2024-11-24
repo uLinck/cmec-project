@@ -1,23 +1,23 @@
-import { Button } from "@mui/material"
-import { Box } from "@mui/system"
-import colors from "../../Styles/colors"
-import Search from "../Search"
-import logo from "../../Assets/Imgs/LogoWhiteM.svg"
-import "./index.css"
-import { useNavigate } from "react-router-dom"
-import { ReactComponent as CalendarioIcon } from "../../Assets/Imgs/Calendario.svg"
+import { Button } from "@mui/material";
+import { Box } from "@mui/system";
+import colors from "../../Styles/colors";
+import Search from "../Search";
+import logo from "../../Assets/Imgs/LogoWhiteM.svg";
+import "./index.css";
+import { useNavigate } from "react-router-dom";
+import { ReactComponent as CalendarioIcon } from "../../Assets/Imgs/Calendario.svg";
 
 export const Header = () => {
-  const navigateTo = useNavigate()
+  const navigateTo = useNavigate();
   const handleScroll = (id: string) => {
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
-        block: "start"
-      })
+        block: "start",
+      });
     }
-  }
+  };
 
   return (
     <Box
@@ -31,7 +31,7 @@ export const Header = () => {
         color: colors.neutral40,
         display: "flex",
         alignItems: "center",
-        transition: "all 0.3s ease"
+        transition: "all 0.3s ease",
       }}
     >
       <Box
@@ -39,21 +39,21 @@ export const Header = () => {
           display: "flex",
           alignItems: "center",
           width: "70%",
-          gap: "3rem"
+          gap: "3rem",
         }}
       >
         <img src={logo} alt="Logo" />
         <Box
           sx={{
             display: "flex",
-            gap: "2rem"
+            gap: "2rem",
           }}
         >
           <a
             href="#!"
-            onClick={e => {
-              e.preventDefault()
-              handleScroll("quem-somos")
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll("quem-somos");
             }}
             className="nav-item"
           >
@@ -61,9 +61,9 @@ export const Header = () => {
           </a>
           <a
             href="#!"
-            onClick={e => {
-              e.preventDefault()
-              handleScroll("infraestrutura")
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll("infraestrutura");
             }}
             className="nav-item"
           >
@@ -71,9 +71,9 @@ export const Header = () => {
           </a>
           <a
             href="#!"
-            onClick={e => {
-              e.preventDefault()
-              handleScroll("atividades")
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll("atividades");
             }}
             className="nav-item"
           >
@@ -81,9 +81,9 @@ export const Header = () => {
           </a>
           <a
             href="#!"
-            onClick={e => {
-              e.preventDefault()
-              handleScroll("servicos")
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll("servicos");
             }}
             className="nav-item"
           >
@@ -105,7 +105,7 @@ export const Header = () => {
           alignItems: "center",
           justifyContent: "end",
           width: "30%",
-          gap: "3rem"
+          gap: "3rem",
         }}
       >
         <Search />
@@ -114,7 +114,11 @@ export const Header = () => {
           color="primary"
           sx={{
             textTransform: "none",
-            color: colors.neutral0
+            color: colors.neutral0,
+          }}
+          onClick={(e) => {
+            e.preventDefault();
+            handleScroll("footer");
           }}
         >
           Contato
@@ -132,12 +136,12 @@ export const Header = () => {
           justifyContent: "center",
           position: "absolute",
           bottom: "-59px",
-          left: 0
+          left: 0,
         }}
         onClick={() => navigateTo("modulo/calendario/infantil/pre-quinto")}
       >
         <CalendarioIcon display={"flex"} />
       </Button>
     </Box>
-  )
-}
+  );
+};
