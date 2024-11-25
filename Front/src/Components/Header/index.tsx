@@ -108,7 +108,7 @@ export const Header = () => {
           gap: "3rem",
         }}
       >
-        <Search />
+        {/* <Search /> */}
         <Button
           variant="outlined"
           color="primary"
@@ -124,24 +124,6 @@ export const Header = () => {
           Contato
         </Button>
       </Box>
-      <Button
-        variant="contained"
-        style={{
-          width: "60px",
-          height: "60px",
-          borderRadius: "0 0 10px 0",
-          margin: 0,
-          backgroundColor: colors.neutral80,
-          display: "flex",
-          justifyContent: "center",
-          position: "absolute",
-          bottom: "-59px",
-          left: 0,
-        }}
-        onClick={() => navigateTo("modulo/calendario/infantil/pre-quinto")}
-      >
-        <CalendarioIcon display={"flex"} />
-      </Button>
     </Box>
   );
 };

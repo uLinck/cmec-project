@@ -1,8 +1,8 @@
-import { Box } from "@mui/material"
-import colors from "../../../Styles/colors"
-import { Service } from "./service"
-import { Van } from "@phosphor-icons/react"
-import { Fade } from "react-awesome-reveal"
+import { Box } from "@mui/material";
+import colors from "../../../Styles/colors";
+import { Service } from "./service";
+import { Van } from "@phosphor-icons/react";
+import { Fade } from "react-awesome-reveal";
 
 export const UsefulServices = () => {
   return (
@@ -13,7 +13,7 @@ export const UsefulServices = () => {
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
-        paddingY: "60vh"
+        paddingY: "30vh",
       }}
     >
       <Box
@@ -22,14 +22,14 @@ export const UsefulServices = () => {
           flexDirection: "column",
           alignItems: "center",
           alignSelf: "center",
-          width: "60%"
+          width: "60%",
         }}
       >
         <h1
           style={{
             color: colors.accent100,
             marginBottom: "1rem",
-            fontWeight: "normal"
+            fontWeight: "normal",
           }}
         >
           Serviços Úteis
@@ -38,7 +38,7 @@ export const UsefulServices = () => {
           style={{
             color: colors.neutral0,
             fontSize: "1.3em",
-            textIndent: 32
+            textIndent: 32,
           }}
         >
           Em nossa escola, disponibilizamos alguns serviços que podem ser úteis
@@ -51,7 +51,7 @@ export const UsefulServices = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-start",
-          gap: "3rem"
+          gap: "3rem",
         }}
       >
         <Fade direction="up" cascade damping={0.2} triggerOnce>
@@ -70,5 +70,5 @@ export const UsefulServices = () => {
         </Fade>
       </Box>
     </Box>
-  )
-}
+  );
+};

@@ -15,7 +15,6 @@ export const Sidebar = () => {
   const [, , moduloNome, moduloValor, moduloCalendarioValor] =
     location.pathname.split("/");
 
-  console.log({ moduloCalendarioValor });
   return (
     <div
       style={{

@@ -20,8 +20,6 @@ const Instituicao = () => {
       });
     };
 
-  console.log(expanded);
-
   return (
     <Box sx={{ width: "80vw", maxWidth: "100vw" }}>
       <Doc

@@ -47,6 +47,7 @@ linear-gradient(264.05deg, rgba(147, 160, 176, 0.2) 0%, rgba(50, 64, 82, 0.2) 50
         <Box
           sx={{
             display: "flex",
+            justifyContent: "center",
             width: "100%",
             gap: "20px",
           }}
@@ -57,7 +58,6 @@ linear-gradient(264.05deg, rgba(147, 160, 176, 0.2) 0%, rgba(50, 64, 82, 0.2) 50
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  width: "160px",
                 }}
               >
                 <h4
