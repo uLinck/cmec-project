@@ -8,6 +8,7 @@ import { Footer } from "../../Components/Footer";
 import { AboutUs } from "../../Components/Sections/AboutUs";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as CalendarioIcon } from "../../Assets/Imgs/Calendario.svg";
+import BannerImg from "../../Assets/Imgs/BannerImg.jpg";
 const Home = () => {
   const navigateTo = useNavigate();
   return (
@@ -47,7 +48,7 @@ const Home = () => {
           <Box
             sx={{
               height: "60vh",
-              backgroundImage: `url(/BannerImg.jpg), radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))`,
+              backgroundImage: `url(${BannerImg}), radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
