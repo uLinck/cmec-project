@@ -49,7 +49,7 @@ const Home = () => {
             sx={{
               height: "60vh",
               backgroundImage: `url(${BannerImg}), radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))`,
-              backgroundPosition: "center",
+              backgroundPosition: "bottom",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
             }}
