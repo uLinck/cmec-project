@@ -13,6 +13,7 @@ import { QuintoAno } from "./Pages/Modulos/Calendario/Fundamental/QuintoAno";
 import { SextoAno } from "./Pages/Modulos/Calendario/Fundamental/SextoAno";
 import { Infantil } from "./Pages/Modulos/Calendario/Infantil";
 import { Header } from "./Components/Header";
+import { AboutUs } from "./Components/Sections/AboutUs";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/testing">
           <Route path="header" element={<Header />} />
+          <Route path="aboutus" element={<AboutUs />} />
         </Route>
 
         <Route path="/modulo" element={<PageLayout />}>

@@ -1,11 +1,11 @@
-import { Box, Button } from "@mui/material"
-import colors from "../../../Styles/colors"
-import { ReactComponent as BackpackIcon } from "../../../Assets/Imgs/Bolsinha.svg"
-import { ReactComponent as InstituicaoIcon } from "../../../Assets/Imgs/InstituicaoIcon.svg"
-import { ReactComponent as CooperativaIcon } from "../../../Assets/Imgs/CooperativaIcon.svg"
-import { ReactComponent as VerEscolaIcon } from "../../../Assets/Imgs/VerEscolaIcon.svg"
-import { Fade } from "react-awesome-reveal"
-import { useNavigate } from "react-router-dom"
+import { Box, Button, Typography } from "@mui/material";
+import colors from "../../../Styles/colors";
+import { ReactComponent as InstituicaoIcon } from "../../../Assets/Imgs/InstituicaoIcon.svg";
+import { ReactComponent as CooperativaIcon } from "../../../Assets/Imgs/CooperativaIcon.svg";
+import { ReactComponent as VerEscolaIcon } from "../../../Assets/Imgs/VerEscolaIcon.svg";
+import { Fade } from "react-awesome-reveal";
+import { useNavigate } from "react-router-dom";
+import { Backpack } from "./backpack";
 
 const styledButton = {
   textTransform: "none",
@@ -18,22 +18,23 @@ const styledButton = {
   borderRadius: "10px",
   marginBottom: "10px",
   "&:hover": {
-    backgroundColor: colors.neutral60
-  }
-}
+    backgroundColor: colors.neutral60,
+  },
+};
 
 export const AboutUs = () => {
-  const navigateTo = useNavigate()
+  const navigateTo = useNavigate();
   return (
     <Box
       sx={{
         maxWidth: "100vw",
         display: "flex",
         flexDirection: "column",
-        gap: "7rem",
-        paddingX: "4rem",
+        gap: { xs: undefined, md: "7rem" },
+        paddingX: { xs: "1em", md: "4rem" },
         overflow: "hidden",
-        position: "relative"
+        position: "relative",
+        alignItems: "center",
       }}
     >
       <Box
@@ -42,49 +43,42 @@ export const AboutUs = () => {
           flexDirection: "column",
           alignItems: "center",
           alignSelf: "center",
-          width: "60%"
+          width: { xs: "100%", md: "60%" },
         }}
       >
-        <Box
-          sx={{
-            position: "absolute",
-            top: "7%",
-            left: "10%"
-          }}
-        >
-          <BackpackIcon width="140px" height="140px" />
-        </Box>
+        <Backpack />
         <h1
           style={{
             color: colors.accent100,
             marginBottom: "0rem",
-            fontWeight: "normal"
+            fontWeight: "normal",
           }}
         >
           Quem Somos?
         </h1>
-        <p
-          style={{
+        <Typography
+          sx={{
             color: colors.neutral0,
-            marginBottom: "4rem",
-            fontSize: "24px",
+            marginTop: { xs: "0.7em", md: undefined },
+            marginBottom: "2rem",
+            fontSize: { xs: "18px", md: "20px" },
             fontWeight: "normal",
-            width: "40vw",
-            textIndent: "40px"
+            width: { xs: "100%", md: "40vw" },
+            textIndent: { xs: "20px", md: "40px" },
           }}
         >
           O Colégio Santa Luzia busca integrar-se à comunidade no processo de
           construção da cidadania, promovendo valores éticos como liberdade,
           respeito à diversidade e à individualidade, e proporcionando um ensino
           diferenciado e de excelência.
-        </p>
+        </Typography>
       </Box>
       <Box
         sx={{
-          position: "absolute",
+          position: { xs: undefined, md: "absolute" },
           width: "200px",
-          top: "10%",
-          left: "80%"
+          top: { xs: undefined, md: "10%" },
+          left: { xs: undefined, md: "80%" },
         }}
       >
         <Fade direction="right" cascade damping={0.2} triggerOnce>
@@ -112,7 +106,7 @@ export const AboutUs = () => {
               window.open(
                 "https://bit.ly/ver-escola",
                 "_blank",
-                "noopener,noreferrer"
+                "noopener,noreferrer",
               )
             }
           >
@@ -121,5 +115,5 @@ export const AboutUs = () => {
         </Fade>
       </Box>
     </Box>
-  )
-}
+  );
+};
