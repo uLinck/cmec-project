@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import "./index.css";
 import { sxs } from "./sxs";
-import { Hamburguer } from "./hamburguer";
+import { Hamburger } from "./hamburger";
 import { NavLinks } from "./navLinks";
 import { useCallback } from "react";
 import { Button } from "@mui/material";
@@ -46,7 +46,7 @@ export const Header = () => {
         {/* <Search /> */}
         <ContactButton />
       </Box>
-      <Hamburguer />
+      <Hamburger />
     </Box>
   );
 };

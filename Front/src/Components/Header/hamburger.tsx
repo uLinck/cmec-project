@@ -6,10 +6,10 @@ import colors from "../../Styles/colors";
 import { NavLinks } from "./navLinks";
 import { sxs } from "./sxs";
 
-export const Hamburguer = () => {
+export const Hamburger = () => {
   const [open, setOpen] = useState(false);
 
-  const toggleBurguer = () => (event: any) => {
+  const toggleBurger = () => (event: any) => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -30,7 +30,7 @@ export const Hamburguer = () => {
         edge="start"
         color="inherit"
         aria-label="Abrir menu"
-        onClick={toggleBurguer()}
+        onClick={toggleBurger()}
       >
         <List color={colors.neutral10} size={32} />
       </IconButton>
@@ -38,7 +38,7 @@ export const Hamburguer = () => {
         anchor="right"
         variant="temporary"
         open={open}
-        onClose={toggleBurguer()}
+        onClose={toggleBurger()}
         PaperProps={{
           sx: {
             display: "flex",
@@ -62,7 +62,7 @@ export const Hamburguer = () => {
           }}
         >
           <Box sx={sxs.logo} />
-          <NavLinks insideBurguer />
+          <NavLinks insideBurger />
           <ContactButton />
         </Box>
       </Drawer>

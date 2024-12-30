@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import { sxs } from "./sxs";
 
 type NavLinksProps = {
-  insideBurguer?: boolean;
+  insideBurger?: boolean;
 };
 
 export const NavLinks = (props: NavLinksProps) => {
@@ -15,19 +15,19 @@ export const NavLinks = (props: NavLinksProps) => {
   ];
 
   return (
-    <Box sx={props.insideBurguer ? sxs.navLinksInsideBurguer : sxs.navLinks}>
+    <Box sx={props.insideBurger ? sxs.navLinksInsideBurger : sxs.navLinks}>
       {navLinks.map((section) => (
         <NavLink
           id={section.id}
           name={section.name}
-          insideBurguer={props.insideBurguer}
+          insideBurger={props.insideBurger}
         />
       ))}
       <a
         href="https://bit.ly/ver-escola"
         target="_blank"
         rel="noopener noreferrer"
-        className={props.insideBurguer ? "nav-item-burguer" : "nav-item"}
+        className={props.insideBurger ? "nav-item-burger" : "nav-item"}
         aria-label="ver escola"
       >
         Ver escola
@@ -39,7 +39,7 @@ export const NavLinks = (props: NavLinksProps) => {
 type Section = {
   id: string;
   name: string;
-  insideBurguer?: boolean;
+  insideBurger?: boolean;
 };
 
 export const NavLink = (section: Section) => {
@@ -60,7 +60,7 @@ export const NavLink = (section: Section) => {
         e.preventDefault();
         handleScroll(section.id);
       }}
-      className={section.insideBurguer ? "nav-item-burguer" : "nav-item"}
+      className={section.insideBurger ? "nav-item-burger" : "nav-item"}
       aria-label={section.id}
       key={section.id}
     >

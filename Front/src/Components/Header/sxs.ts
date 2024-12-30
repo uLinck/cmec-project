@@ -24,7 +24,7 @@ export const sxs = {
     width: "70%",
     gap: "2rem",
   },
-  navLinksInsideBurguer: {
+  navLinksInsideBurger: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
