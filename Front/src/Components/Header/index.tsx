@@ -1,15 +1,14 @@
-import { Button } from "@mui/material";
 import { Box } from "@mui/system";
-import colors from "../../Styles/colors";
-import Search from "../Search";
-import logo from "../../Assets/Imgs/LogoWhiteM.svg";
 import "./index.css";
-import { useNavigate } from "react-router-dom";
-import { ReactComponent as CalendarioIcon } from "../../Assets/Imgs/Calendario.svg";
+import { sxs } from "./sxs";
+import { Hamburguer } from "./hamburguer";
+import { NavLinks } from "./navLinks";
+import { useCallback } from "react";
+import { Button } from "@mui/material";
+import colors from "../../Styles/colors";
 
-export const Header = () => {
-  const navigateTo = useNavigate();
-  const handleScroll = (id: string) => {
+export const ContactButton = () => {
+  const handleScroll = useCallback((id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
@@ -17,113 +16,37 @@ export const Header = () => {
         block: "start",
       });
     }
-  };
+  }, []);
 
   return (
-    <Box
+    <Button
+      variant="outlined"
+      color="primary"
       sx={{
-        top: 0,
-        position: "sticky",
-        zIndex: 1000,
-        backgroundColor: colors.neutral80,
-        paddingY: "0.8rem",
-        paddingX: "3rem",
-        color: colors.neutral40,
-        display: "flex",
-        alignItems: "center",
-        transition: "all 0.3s ease",
+        textTransform: "none",
+        color: colors.neutral0,
+        width: "fit-content",
+      }}
+      onClick={(e) => {
+        e.preventDefault();
+        handleScroll("footer");
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          width: "70%",
-          gap: "3rem",
-        }}
-      >
-        <img src={logo} alt="Logo" />
-        <Box
-          sx={{
-            display: "flex",
-            gap: "2rem",
-          }}
-        >
-          <a
-            href="#!"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("quem-somos");
-            }}
-            className="nav-item"
-          >
-            Quem somos
-          </a>
-          <a
-            href="#!"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("infraestrutura");
-            }}
-            className="nav-item"
-          >
-            Infraestrutura
-          </a>
-          <a
-            href="#!"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("atividades");
-            }}
-            className="nav-item"
-          >
-            Ativ. Pedagógicas
-          </a>
-          <a
-            href="#!"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("servicos");
-            }}
-            className="nav-item"
-          >
-            Serviços
-          </a>
-          <a
-            href="https://bit.ly/ver-escola"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-item"
-          >
-            Ver escola
-          </a>
-        </Box>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "end",
-          width: "30%",
-          gap: "3rem",
-        }}
-      >
+      Contato
+    </Button>
+  );
+};
+
+export const Header = () => {
+  return (
+    <Box sx={sxs.header}>
+      <Box sx={sxs.logo} />
+      <NavLinks />
+      <Box sx={sxs.rightSideContainer}>
         {/* <Search /> */}
-        <Button
-          variant="outlined"
-          color="primary"
-          sx={{
-            textTransform: "none",
-            color: colors.neutral0,
-          }}
-          onClick={(e) => {
-            e.preventDefault();
-            handleScroll("footer");
-          }}
-        >
-          Contato
-        </Button>
+        <ContactButton />
       </Box>
+      <Hamburguer />
     </Box>
   );
 };

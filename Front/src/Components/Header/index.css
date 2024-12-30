@@ -1,9 +1,19 @@
 .nav-item {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.nav-item-burguer {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+  padding: 20px 0 20px 0;
+  width: 50%;
+  text-align: center;
+  border-bottom: 1px solid #627389;
 }
 
 .nav-item:hover {
-    color: #F9FBFF
+  color: #f9fbff;
 }

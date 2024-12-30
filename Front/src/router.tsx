@@ -1,23 +1,28 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import "./App.css"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
 
-import Home from "./Pages/Home"
-import { PageLayout } from "./Components/PageLayout"
-import Instituicao from "./Pages/Modulos/Colaboradores/Instituicao"
-import Cooperativa from "./Pages/Modulos/Colaboradores/Cooperativa"
-import { PrimeiroAno } from "./Pages/Modulos/Calendario/Fundamental/PrimeiroAno"
-import { SegundoAno } from "./Pages/Modulos/Calendario/Fundamental/SegundoAno"
-import { TerceiroAno } from "./Pages/Modulos/Calendario/Fundamental/TerceiroAno"
-import { QuartoAno } from "./Pages/Modulos/Calendario/Fundamental/QuartoAno"
-import { QuintoAno } from "./Pages/Modulos/Calendario/Fundamental/QuintoAno"
-import { SextoAno } from "./Pages/Modulos/Calendario/Fundamental/SextoAno"
-import { Infantil } from "./Pages/Modulos/Calendario/Infantil"
+import Home from "./Pages/Home";
+import { PageLayout } from "./Components/PageLayout";
+import Instituicao from "./Pages/Modulos/Colaboradores/Instituicao";
+import Cooperativa from "./Pages/Modulos/Colaboradores/Cooperativa";
+import { PrimeiroAno } from "./Pages/Modulos/Calendario/Fundamental/PrimeiroAno";
+import { SegundoAno } from "./Pages/Modulos/Calendario/Fundamental/SegundoAno";
+import { TerceiroAno } from "./Pages/Modulos/Calendario/Fundamental/TerceiroAno";
+import { QuartoAno } from "./Pages/Modulos/Calendario/Fundamental/QuartoAno";
+import { QuintoAno } from "./Pages/Modulos/Calendario/Fundamental/QuintoAno";
+import { SextoAno } from "./Pages/Modulos/Calendario/Fundamental/SextoAno";
+import { Infantil } from "./Pages/Modulos/Calendario/Infantil";
+import { Header } from "./Components/Header";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/testing">
+          <Route path="header" element={<Header />} />
+        </Route>
+
         <Route path="/modulo" element={<PageLayout />}>
           <Route path="colaboradores/instituicao" element={<Instituicao />} />
           <Route path="colaboradores/cooperativa" element={<Cooperativa />} />
@@ -63,7 +68,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
