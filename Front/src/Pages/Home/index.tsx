@@ -60,8 +60,8 @@ const Home = () => {
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
-              borderRadius: { xs: "50%", md: "0px" }, // Deixa circular no celular
-              margin: { xs: "0 auto", md: "0" }, // Centraliza no celular
+              borderRadius: { xs: "50%", md: "0px" },
+              margin: { xs: "0 auto", md: "0" },
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
