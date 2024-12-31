@@ -48,7 +48,12 @@ const Home = () => {
           background: `linear-gradient(20deg, ${colors.neutral80} 0%, ${colors.neutral60} 50%, ${colors.primary60} 100%)`,
         }}
       >
-        <Box id="quem-somos">
+        <Box
+          id="quem-somos"
+          sx={{
+            paddingTop: { xs: "1em", md: "0" },
+          }}
+        >
           <Box
             sx={{
               height: { xs: "60vw", md: "60vh" },
