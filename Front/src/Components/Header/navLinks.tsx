@@ -4,6 +4,7 @@ import { sxs } from "./sxs";
 
 type NavLinksProps = {
   insideBurger?: boolean;
+  afterNavigationCallback?: () => void;
 };
 
 export const NavLinks = (props: NavLinksProps) => {
@@ -17,11 +18,7 @@ export const NavLinks = (props: NavLinksProps) => {
   return (
     <Box sx={props.insideBurger ? sxs.navLinksInsideBurger : sxs.navLinks}>
       {navLinks.map((section) => (
-        <NavLink
-          id={section.id}
-          name={section.name}
-          insideBurger={props.insideBurger}
-        />
+        <NavLink section={section} navLinksProps={props} />
       ))}
       <a
         href="https://bit.ly/ver-escola"
@@ -39,10 +36,14 @@ export const NavLinks = (props: NavLinksProps) => {
 type Section = {
   id: string;
   name: string;
-  insideBurger?: boolean;
 };
 
-export const NavLink = (section: Section) => {
+type NavLinkProps = {
+  section: Section;
+  navLinksProps: NavLinksProps;
+};
+
+export const NavLink = (props: NavLinkProps) => {
   const handleScroll = useCallback((id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -58,13 +59,20 @@ export const NavLink = (section: Section) => {
       href="#!"
       onClick={(e) => {
         e.preventDefault();
-        handleScroll(section.id);
+        handleScroll(props.section.id);
+        if (
+          props.navLinksProps.insideBurger &&
+          props.navLinksProps.afterNavigationCallback
+        )
+          props.navLinksProps.afterNavigationCallback();
       }}
-      className={section.insideBurger ? "nav-item-burger" : "nav-item"}
-      aria-label={section.id}
-      key={section.id}
+      className={
+        props.navLinksProps.insideBurger ? "nav-item-burger" : "nav-item"
+      }
+      aria-label={props.section.id}
+      key={props.section.id}
     >
-      {section.name}
+      {props.section.name}
     </a>
   );
 };

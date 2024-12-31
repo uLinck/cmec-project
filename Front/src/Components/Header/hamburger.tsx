@@ -9,8 +9,9 @@ import { sxs } from "./sxs";
 export const Hamburger = () => {
   const [open, setOpen] = useState(false);
 
-  const toggleBurger = () => (event: any) => {
+  const toggleBurger = () => (event?: any) => {
     if (
+      event &&
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
     ) {
@@ -62,7 +63,7 @@ export const Hamburger = () => {
           }}
         >
           <Box sx={sxs.logo} />
-          <NavLinks insideBurger />
+          <NavLinks insideBurger afterNavigationCallback={toggleBurger()} />
           <ContactButton />
         </Box>
       </Drawer>
