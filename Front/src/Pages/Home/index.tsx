@@ -9,6 +9,7 @@ import { AboutUs } from "../../Components/Sections/AboutUs";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as CalendarioIcon } from "../../Assets/Imgs/Calendario.svg";
 import BannerImg from "../../Assets/Imgs/BannerImg.jpg";
+import BannerImgPhone from "../../Assets/Imgs/BannerImgPhone.jpg";
 const Home = () => {
   const navigateTo = useNavigate();
   return (
@@ -50,11 +51,20 @@ const Home = () => {
         <Box id="quem-somos">
           <Box
             sx={{
-              height: "60vh",
-              backgroundImage: `url(${BannerImg}), radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))`,
-              backgroundPosition: "bottom",
+              height: { xs: "60vw", md: "60vh" },
+              width: { xs: "60vw", md: "100%" },
+              backgroundImage: {
+                xs: `url(${BannerImgPhone}), radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))`,
+                md: `url(${BannerImg}), radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))`,
+              },
+              backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
+              borderRadius: { xs: "50%", md: "0px" }, // Deixa circular no celular
+              margin: { xs: "0 auto", md: "0" }, // Centraliza no celular
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           ></Box>
 
