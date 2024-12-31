@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import colors from "../../../Styles/colors";
-import { blue } from "@mui/material/colors";
 
 type TServiceData = {
   icon: JSX.Element;

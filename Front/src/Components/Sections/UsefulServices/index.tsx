@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import colors from "../../../Styles/colors";
 import { Service } from "./service";
 import { Van } from "@phosphor-icons/react";
@@ -14,6 +14,7 @@ export const UsefulServices = () => {
         flexDirection: "column",
         alignItems: "center",
         paddingY: "30vh",
+        paddingX: "1em",
       }}
     >
       <Box
@@ -22,7 +23,7 @@ export const UsefulServices = () => {
           flexDirection: "column",
           alignItems: "center",
           alignSelf: "center",
-          width: "60%",
+          width: { xs: "100%", md: "60%" },
         }}
       >
         <h1
@@ -34,27 +35,35 @@ export const UsefulServices = () => {
         >
           Serviços Úteis
         </h1>
-        <p
-          style={{
+        <Typography
+          sx={{
             color: colors.neutral0,
-            fontSize: "1.3em",
-            textIndent: 32,
+            fontSize: { xs: "1em", md: "20px" },
+            textIndent: { xs: "20px", md: "40px" },
           }}
         >
           Em nossa escola, disponibilizamos alguns serviços que podem ser úteis
           para o aluno, a fim de que ele tenha uma experiência melhor conosco!
-        </p>
+        </Typography>
       </Box>
       <Box
         sx={{
-          width: "100%",
+          width: { xs: "100%", md: "fit-content" },
           display: "flex",
           justifyContent: "center",
-          alignItems: "flex-start",
+          flexDirection: { xs: "column", sm: "row" },
+          alignItems: "center",
+          marginTop: { xs: "1.5em", md: undefined },
           gap: "3rem",
         }}
       >
-        <Fade direction="up" cascade damping={0.2} triggerOnce>
+        <Fade
+          direction="up"
+          cascade
+          damping={0.2}
+          triggerOnce
+          style={{ width: "100%" }}
+        >
           <Service
             icon={<Van size={60} color={colors.accent100} />}
             name="Van Escolar"

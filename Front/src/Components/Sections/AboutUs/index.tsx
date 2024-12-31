@@ -61,7 +61,7 @@ export const AboutUs = () => {
             color: colors.neutral0,
             marginTop: { xs: "0.7em", md: undefined },
             marginBottom: "2rem",
-            fontSize: { xs: "18px", md: "20px" },
+            fontSize: { xs: "1em", md: "20px" },
             fontWeight: "normal",
             width: { xs: "100%", md: "40vw" },
             textIndent: { xs: "20px", md: "40px" },

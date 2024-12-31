@@ -61,7 +61,7 @@ export const PedagogicalActivities = () => {
         <Typography
           sx={{
             color: colors.neutral0,
-            fontSize: { xs: "18px", md: "20px" },
+            fontSize: { xs: "1em", md: "20px" },
             textIndent: { xs: "20px", md: "40px" },
           }}
         >
