@@ -14,6 +14,7 @@ import { SextoAno } from "./Pages/Modulos/Calendario/Fundamental/SextoAno";
 import { Infantil } from "./Pages/Modulos/Calendario/Infantil";
 import { Header } from "./Components/Header";
 import { AboutUs } from "./Components/Sections/AboutUs";
+import Search from "./Components/Search";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/testing">
           <Route path="header" element={<Header />} />
           <Route path="aboutus" element={<AboutUs />} />
+          <Route path="search" element={<Search />} />
         </Route>
 
         <Route path="/modulo" element={<PageLayout />}>
